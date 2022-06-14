@@ -54,7 +54,7 @@ with open('LICENSE') as file:
 
 # Check if we are on windows in order to link with system libraries
 extra_objects = []
-if sys.platform is "win32":
+if sys.platform == "win32":
     extra_objects=["Ws2_32.Lib", "Wldap32.Lib", "Crypt32.Lib"]
 
 
