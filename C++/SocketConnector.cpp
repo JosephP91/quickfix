@@ -100,9 +100,6 @@ int SocketConnector::connect( const std::string& address, int port, bool noDelay
           socket_bind( socket, sourceAddress.c_str(), sourcePort );
     m_monitor.addConnect( socket );
     socket_connect( socket, address.c_str(), port );
-
-    std::string message = "CONNECT http://149.5.77.206:9721 HTTP/1.1\r\n\r\n";
-    socket_send(socket, message.c_str(), message.length());
   }
   return socket;
 }
