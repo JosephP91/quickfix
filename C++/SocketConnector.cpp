@@ -88,6 +88,7 @@ int SocketConnector::connect( const std::string& address, int port, bool noDelay
 {
   int socket = socket_createConnector();
 
+  std::cout<<"ADDRESS: " << address << "PORT: " << port << "SRC ADDR: " << sourceAddress << "SRC PORT: " << sourcePort;
   if ( socket != -1 )
   {
     if( noDelay )
